@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Bot token and username
-TOKEN = '7865965920:AAFr-KpM45NngkSPJyNnDNUZ9IoPPVpIBfE'
+TOKEN = '7865965920:AAHCo5TK7A2OCE_s25B4PrFdi18ofMy1skA'
 BOT_USERNAME = '@RAD_Radium_bot'
 
 # Launch date: December 13th, 10 PM UTC
@@ -55,7 +55,7 @@ def handle_response(text: str) -> str:
     if 'website' in processed:
         return 'https://radium-crypto.vercel.app/'
     if 'ca' in processed:
-        return 'Sorry, it will be only available after the launch!'
+        return 'GRaBF72XpqpvdovPfFTV6JxVcL5kcgUpqKiHv2hapump'
 
     return ""
 
@@ -71,7 +71,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Check if any of the keywords are in the message text
     if any(keyword in text.lower() for keyword in keywords):
         # Send launch information
-        launch_info = "🚀 Radium Token will be launched on December 13th at 10 PM UTC! 🚀"
+        launch_info = "🚀 XRPS Token will be launched on 18.35 UTC! 🚀"
         await update.message.reply_text(launch_info)
         return  # Stop further processing to avoid sending general responses
 
@@ -89,7 +89,7 @@ async def delete_rug_message(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 # Handler to delete messages containing bad words
 async def delete_bad_words(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    bad_words = ['fuck', 'suck']  # Add more bad words as needed
+    bad_words = ['fuck', 'suck','mf']  # Add more bad words as needed
     text = update.message.text.lower()  # Make the text lowercase for case-insensitive matching
     if any(word in text for word in bad_words):
         try:
